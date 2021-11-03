@@ -3,6 +3,87 @@
 body {
     font-family: Poppins;
 }
-#errorPassword, #errorName, #errorPhone {
+.Formulario__label {
+    display: block;
+    cursor: pointer;
+}
+
+.formulario__grupo-input {
+    position: relative;
+
+}
+
+.formulario__grupo {
+    width: 100%;
+    background: #fff;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    transition: .3s ease all;
+}
+
+.formulario__input:focus {
+
+    border-color: blue;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+.formulario__input-error {
+    font-size: 12px;
+    margin-bottom: 0;
     display: none;
+    color:#bb2930;
+}
+
+.formulario__validacion-estado {
+    position: absolute;
+    z-index: 100;
+    opacity: 0;
+}
+
+.formulario__mensajeError,
+.formulario__lletresLastName-error,
+.formulario__password-error,
+.formulario__PhoneNumber-error {
+    background: #f66969;
+    display: none;
+}
+
+.formulario__mensajeError-activo {
+    display: block;
+}
+
+.formulario__mensaje-exito {
+
+    font-size: 14px;
+    color: #119200;
+    display: none;
+
+}
+
+.formulario__mensaje-exito-activo {
+    display: block;
+}
+
+
+
+/*-------------------ESTILS VALIDACIO-----------------------------------------------------------------------------------------------*/
+
+.formulario__grupo-correcto .formulario__validacion-estado {
+    color: #1ed12d;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto .Formulario__label {
+    color: #bb2930;
+
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+    color: #bb2930;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+    border: 3px solid #bb2930;
 }
