@@ -13,8 +13,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="checkout.css">
     <title>Checkout Page</title>
+
 </head>
 
 <body>
@@ -43,53 +44,169 @@
     </div>
     <!-- icons end here -->
     <!-- Checkout starts here -->
-    <form class="form">
-        <div class="row bord p-5 shadow m-5">
+
+
+
+
+    <form class="form" id="formulario">
+
+        <div clas="formulario__grupoEntero" class="row bord p-5 shadow m-5">
+
             <div class="col-sm-6">
-                <div class="mt-3 row">
-                    <h5 class="my-auto">First Name :</h5>
-                    <input class="ml-3 name input rounded p-2" type="text" placeholder="First Name" />
-                    <p id="errorName">Numbers in the name are not valid</p>
+
+                <div class="formulario__grupo" class="mt-3 row" id="grupo_FirstName">
+
+                    <label for="First Name" class="Formulario__label" class="my-auto">First Name :</label>
+
+                    <div class="formulario__grupo-input">
+
+                        <input class="formulario__input" class="ml-3 rounded p-2" name="FirstName" id="FirstName"
+                            type="text" placeholder="First Name" />
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        <!--Cercle verd o vermell que ens indica si es correcte o no, extret de fontawesome-->
+
+                    </div>
+
                 </div>
-                <div class="mt-3 row ">
-                    <h5 class="my-auto">Email :</h5>
-                    <input class="ml-3 input rounded p-2" type="email" placeholder="Email" />
+
+                <p class="formulario__lletres-error formulario__input-error">El nom ha de contenir només lletres</p>
+                <p class="formulario__camps-error formulario__input-error">Tots els camps són obligatoris.</p>
+                <p class="formulario__mesTres-error formulario__input-error">Tots els camps han de tenir almenys 3 caràcters.</p>
+            
+                <!--Missatge de error-->
+
+
+
+                <div class="formulario__grupo" id="grupo_Email" class="mt-3 row ">
+
+                    <label for="Email" class="Formulario__label" class="my-auto">Email :</label>
+
+                    <input class="formulario__input" class="ml-3 input rounded p-2" name="Email" id="Email" type="Email"
+                        placeholder="Email" />
+
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    <!--Cercle verd o vermell que ens indica si es correcte o no, extret de fontawesome-->
                 </div>
-                <div class="mt-3 row ">
-                    <h5 class="my-auto">Address :</h5>
-                    <input class="ml-3 input rounded p-2" type="text" placeholder="Address" />
+
+                <p class="formulario__email-error formulario__input-error">L'email ha de tenir format d'email</p>
+                <p class="formulario__campsEmail-error formulario__input-error">Tots els camps són obligatoris.</p>
+                <p class="formulario__mesTresEmail-error formulario__input-error">Tots els camps han de tenir almenys 3 caràcters.</p>
+                <!--Missatge de error-->
+
+
+
+                <div class="formulario__grupo" id="grupo_Address" class="mt-3 row ">
+
+                    <label for="Address" class="Formulario__label" class="my-auto">Address :</label>
+
+                    <input class="formulario__input" name="Address" id="Address" class="ml-3 input rounded p-2"
+                        type="text" placeholder="Address" />
+
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    <!--Cercle verd o vermell que ens indica si es correcte o no, extret de fontawesome-->
+
                 </div>
+
+
+                <p class="formulario__lletresLastName-error"> Tots els camps són obligatoris</p>
+                <p class="formulario__campsAddress-error formulario__input-error">Tots els camps són obligatoris.</p>
+                <p class="formulario__mesTresAddress-error formulario__input-error">Tots els camps han de tenir almenys 3 caràcters.</p>
+                <!--Missatge de error-->
+
             </div>
+
+
+
+
+
             <div class="col-sm-6">
-                <div class="mt-3 row">
-                    <h5 class="my-auto name my-auto">Last Name :</h5>
-                    <input class="ml-3 input rounded p-2" type="text" placeholder="Last Name" />
+
+
+                <div class="formulario__grupo" id="grupo_LastName" class="mt-3 row">
+
+                    <label for="Last Name" class="Formulario__label" class="my-auto name my-auto">Last Name :</label>
+
+                    <input class="formulario__input focus" name="LastName" id="LastName" class="ml-3 input rounded p-2"
+                        type="text" placeholder="Last Name" />
+
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    <!--Cercle verd o vermell que ens indica si es correcte o no, extret de fontawesome-->
+
                 </div>
-                <div class="mt-3 row">
-                    <h5 class="my-auto my-auto">Password :</h5>
-                    <input class="ml-3 input password rounded p-2" title="(4-8 characters)" type="password" minlength="4"
-                        maxlength="8" placeholder="Password" />
-                    <p id="errorPassword">Enter a correct password</p>
+
+                <p class="formulario__input-error">El cognom ha de contenir només lletres</p>
+                <p class="formulario__campsLastName-error formulario__input-error">Tots els camps són obligatoris.</p>
+                <p class="formulario__mesTresLastName-error formulario__input-error">Tots els camps han de tenir almenys 3 caràcters.</p>
+                <!--Missatge de error-->
+
+
+                <div class="formulario__grupo" id="grupo_Password" class="mt-3 row">
+
+                    <label for="password" class="Formulario__label" class="my-auto my-auto">Password :</label>
+
+                    <input class="formulario__input" name="password" id="password"
+
+                        class="ml-3 input password rounded p-2" name="password" title="(4-8 characters)" type="password"
+                        minlength="4" maxlength="8" placeholder="Password"></input>
+
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    <!--Cercle verd o vermell que ens indica si es correcte o no, extret de fontawesome-->
+
                 </div>
-                <div class="mt-3 row">
-                    <h5 class="my-auto my-auto">Phone Number :</h5>
-                    <input class="ml-3 phone input rounded p-2" type="number" placeholder="Phone No." />
-                    <p id="errorPhone">Invalid phone number!!</p>
+
+                <p class="formulario__password-error">La contrasenya ha d'incloure números i lletres</p>
+                <p class="formulario__campsPassword-error formulario__input-error">Tots els camps són obligatoris.</p>
+                <p class="formulario__mesTresPassword-error formulario__input-error">Tots els camps han de tenir almenys 3 caràcters.</p>
+                <!--Missatge de error-->
+
+
+                <div class="formulario__grupo" id="grupo__PhoneNumber" class="mt-3 row">
+
+                    <label for="password" class="Formulario__label" class="my-auto my-auto">Phone Number :</label>
+
+                    <input class="formulario__input" name="PhoneNumber" id="PhoneNumber"
+                        class="ml-3 phone input rounded p-2" type="number" placeholder="Phone No." />
+
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    <!--Cercle verd o vermell que ens indica si es correcte o no, extret de fontawesome-->
+
                 </div>
+
+                <p class="formulario__PhoneNumber-error">El telèfon ha de contenir només números</p>
+                <p class="formulario__campsPhoneNumber-error formulario__input-error">Tots els camps són obligatoris.</p>
+                <p class="formulario__mesTresPhoneNumber-error formulario__input-error">Tots els camps han de tenir almenys 3 caràcters.</p>
+                <!--Missatge de error-->
             </div>
+
+
+            <div class="formulario__mensajeError" id="formulario__mensajeError">
+
+                <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Tots els camps són obligatoris</p>
+
+
+            </div>
+
+
         </div>
 
 
         <!-- Checkout ends here -->
         <!-- Buy button -->
-        <div class="m-5 final text-right">
-            <button type="submit" id="btn" class="p-2 px-4 btn btn-primary shadow-lg" onclick="validate()"><i
-                    class="fas fa-cart-arrow-down p-2"></i>Buy</button>
+
+        <div class="formulario__grupo formulario__grupo-btn-enviar m-5 final text-right">
+
+            <button type="submit" id="btn" class="formulario__btn p-2 px-4 btn btn-primary shadow-lg"
+                onclick="validate()">
+                <i class="fas fa-cart-arrow-down p-2"></i>Buy
+            </button>
+            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulari enviat correctament!!!</p>
+
         </div>
     </form>
     <!-- Buy Button -->
     <!-- script tags -->
-    <script src="js/checkout.js"></script>
+    <script src="checkout.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 
 </body>
 
