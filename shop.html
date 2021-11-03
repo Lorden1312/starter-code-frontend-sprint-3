@@ -11,12 +11,15 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="css/shop.css">
+  <link rel="stylesheet" href="css/grocery.css">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>ShopNow</title>
 </head>
 
+
+
 <body>
+
 
   <!-- navbar -->
   <nav class="navbar navbar-expand-md bg-secondary sticky-top">
@@ -35,7 +38,12 @@
             My Cart</a>
         </li>
       </ul>
-    </div>
+    </div> 
+    <button type="button" onclick= "cleanCart()" class="btn btn-primary">ELIMINAR</button>
+    <button type="button" onclick= "calculateSubtotals()" class="btn btn-primary">SUBTOTAL</button>
+    <button type="button" onclick= "calculateTotal()" class="btn btn-primary">TOTAL</button>
+    <button type="button" onclick= "applyPromotionsSubtotals()" class="btn btn-primary">PROMOCIONES</button>
+    <button type="button" onclick= "applyPromotionsCart()" class="btn btn-primary">SUBTOTAL WITH DISCOUNTS</button>
   </nav>
 
   <h1 class="text-center mt-3 m-5">Welcome to the ShopNow</h1>
@@ -50,7 +58,7 @@
         <div class="card-body text-center">
           <h5 class="card-title">cooking oil</h5>
           <h1 class="card-text">$10.5</h1>
-          <button type="button" onclick="buy(1)" class="btn btn-primary">Add to cart</button>
+          <button type="button" onclick="addToCartList(1)" class="btn btn-primary">Add to cart</button>
         </div>
       </div>
 
@@ -59,7 +67,7 @@
         <div class="card-body text-center">
           <h5 class="card-title">Pasta</h5>
           <h1 class="card-text">$6.25</h1>
-          <button type="button" onclick="buy(2)" class="btn btn-primary">Add to cart</button>
+          <button type="button" onclick="addToCartList(2)" class="btn btn-primary">Add to cart</button>
         </div>
       </div>
 
@@ -68,7 +76,7 @@
         <div class="card-body text-center">
           <h5 class="card-title">Instant cupcake mixture</h5>
           <h1 class="card-text">$5</h1>
-          <button type="button" onclick="buy(3)" class="btn btn-primary">Add to cart</button>
+          <button type="button" onclick="addToCartList(3)" class="btn btn-primary">Add to cart</button>
         </div>
       </div>
     </div>
@@ -84,7 +92,7 @@
         <div class="card-body text-center">
           <h5 class="card-title">All-in-1</h5>
           <h1 class="card-text">$260</h1>
-          <button type="button" onclick="buy(4)" class="btn btn-primary">Add to cart</button>
+          <button type="button" onclick="addToCartList(4)" class="btn btn-primary">Add to cart</button>
         </div>
       </div>
 
@@ -93,7 +101,7 @@
         <div class="card-body text-center">
           <h5 class="card-title">Zero makeup kit</h5>
           <h1 class="card-text">$20.5</h1>
-          <button type="button" onclick="buy(5)" class="btn btn-primary">Add to cart</button>
+          <button type="button" onclick="addToCartList(5)" class="btn btn-primary">Add to cart</button>
         </div>
       </div>
 
@@ -102,7 +110,7 @@
         <div class="card-body text-center">
           <h5 class="card-title">Lip tints</h5>
           <h1 class="card-text">$12.75</h1>
-          <button type="button" onclick="buy(6)" class="btn btn-primary">Add to cart</button>
+          <button type="button" onclick="addToCartList(6)" class="btn btn-primary">Add to cart</button>
         </div>
       </div>
     </div>
@@ -118,7 +126,7 @@
         <div class="card-body text-center">
           <h5 class="card-title">Lawn dress</h5>
           <h1 class="card-text">$15</h1>
-          <button type="button" onclick="buy(7)" class="btn btn-primary">Add to cart</button>
+          <button type="button" onclick="addToCartList(7)" class="btn btn-primary">Add to cart</button>
         </div>
       </div>
 
@@ -127,7 +135,7 @@
         <div class="card-body text-center">
           <h5 class="card-title">Lawn-chiffon combo</h5>
           <h1 class="card-text">$19.99</h1>
-          <button type="button" onclick="buy(8)" class="btn btn-primary">Add to cart</button>
+          <button type="button" onclick="addToCartList(8)" class="btn btn-primary">Add to cart</button>
         </div>
       </div>
 
@@ -136,7 +144,7 @@
         <div class="card-body text-center">
           <h5 class="card-title">Toddler Frock</h5>
           <h1 class="card-text">$9.99</h1>
-          <button type="button" onclick="buy(9)" class="btn btn-primary">Add to cart</button>
+          <button type="button" onclick="addToCartList(9)" class="btn btn-primary">Add to cart</button>
         </div>
       </div>
       
@@ -185,7 +193,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-  <script src="js/shop.js"></script>
+  <script src="grocery.js"></script>
 </body>
 
 </html>
